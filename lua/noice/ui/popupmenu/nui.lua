@@ -19,15 +19,15 @@ function M.setup() end
 ---@param state Popupmenu
 function M.align(state)
   local max_width = 0
-  for _, item in ipairs(state.items) do
-    max_width = math.max(max_width, item.text:width())
-  end
-  for _, item in ipairs(state.items) do
-    local width = item.text:width()
-    if width < max_width then
-      item.text:append(string.rep(" ", max_width - width))
-    end
-  end
+  -- for _, item in ipairs(state.items) do
+  --   max_width = math.max(max_width, item.text:width())
+  -- end
+  -- for _, item in ipairs(state.items) do
+  --   local width = item.text:width()
+  --   if width < max_width then
+  --     item.text:append(string.rep(" ", max_width - width))
+  --   end
+  -- end
   return max_width
 end
 
