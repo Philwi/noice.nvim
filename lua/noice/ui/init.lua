@@ -20,9 +20,9 @@ function M.enable()
   local stack_level = 0
 
   vim.ui_attach(Config.ns, {
-    ext_messages = false -- Config.options.messages.enabled,
-    ext_cmdline = false --Config.options.cmdline.enabled,
-    ext_popupmenu = false -- Config.options.popupmenu.enabled,
+    ext_messages = false, -- Config.options.messages.enabled,
+    ext_cmdline = false, --Config.options.cmdline.enabled,
+    ext_popupmenu = false, -- Config.options.popupmenu.enabled,
   }, function(event, ...)
     -- dont process any messages during redraw, since redraw triggers last messages
     -- if not Hacks.inside_redraw then
