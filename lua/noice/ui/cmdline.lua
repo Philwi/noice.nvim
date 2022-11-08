@@ -79,14 +79,14 @@ function Cmdline:get_format()
     return #a.pattern > #b.pattern
   end)
 
-  for _, format in pairs(formats) do
-    local from, to = line:find(format.pattern)
-    -- if match and cmdline pos is visible
-    if from and self.state.pos >= to - 1 then
-      self.offset = format.conceal and to or 0
-      return format
-    end
-  end
+  -- for _, format in pairs(formats) do
+  --   local from, to = line:find(format.pattern)
+  --   -- if match and cmdline pos is visible
+  --   if from and self.state.pos >= to - 1 then
+  --     self.offset = format.conceal and to or 0
+  --     return format
+  --   end
+  -- end
   self.offset = 0
   return {
     kind = self.state.firstc,
